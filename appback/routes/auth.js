@@ -35,7 +35,10 @@ router.get('/profile',isAuth,(req,res,next)=>{
   return res.status(201).json(req.user) 
 })
 
-
+router.get('/logout',(req,res,next)=>{
+  req.logOut()
+  res.status(200).json({message:'Logged out successfully'})
+})
 
 
 
